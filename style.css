@@ -1,12 +1,37 @@
-h1{
-    color: red;
+header{
+  width: 100%;
 }
 
-section{
-    min-width: 200px;
-    width: 50%;
+.lienh{
+
+display: inline-block;
+margin-left: 70%;
+}
+
+.lienh a{
+   margin:30px;
+}
+.body img{
+  width: 150px;
+  height: 75px;
+}
+.Hsection{
+ width: 500px;
+ height: 420px;
 }
 
 .heberg{
   display: inline-block;
+}
+
+
+
+.lpp{
+  width: 100px;
+  height: 420px;
+}
+
+
+.body{
+  display: inline-flex;
 }
