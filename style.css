@@ -9,11 +9,20 @@ header a{
 }
 .recherche{
   background-color: lightcyan;
+  margin-left: 2%;
+}
+.barre_de_recherche{
+  display: flex;
+}
+.barre_de_recherche i{
+  background-color: grey;
 }
 
 .bouton_recherche{
   color: white;
  background-color: #0065FC;
+ height: 30px;
+ border-radius: 0px 10px 10px 0px;
 }
 .filtre{
   display: flex;
@@ -29,6 +38,10 @@ margin-right: 1%;
 padding-left: 2%;
 padding-right: 2%;
 }
+figure{
+  background-color: white;
+  border-radius: 10px;
+}
 .resultat_recherche img{
   width: 240px;
   height: 120px;
@@ -38,7 +51,7 @@ padding-right: 2%;
  grid-template-columns: 70% 30%;
 }
 .resultat_hebergement{
- background-color: cornflowerblue;
+ background-color: #F2F2F2;
  max-width: 1200px;
  height: auto;
  display: grid;
@@ -48,25 +61,42 @@ padding-right: 2%;
  
  
 }
-
-.grid-item{
-
+.resultat_hebergement figcaption{
+      margin-left: 15px;
 }
+
+.img_hebergement{
+margin: 15px;
+}
+.resultat_hebergement figure p{
+  margin-left: 15px;
+}
+.etoile{
+  margin-left:15px ;
+}
+/* figure i{
+  margin-left: 15px;
+} */
 
 .proposition_hebergement{
   background-color: darkkhaki;
   height: auto;  
 }
-
-.proposition_activite img{
-
+.proposition_hebergement figure {
+  
 }
+
+
 
 .proposition_activite{
   background-color: yellow;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+ 
+}
+.proposition_activite img{
+ 
 }
 
 .child1{
@@ -86,4 +116,5 @@ padding-right: 2%;
 }
 footer{
   background-color:pink ;
+  display: flex;
 }
