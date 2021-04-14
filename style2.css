@@ -1,8 +1,11 @@
+body{
+    margin: 0px;
+}
 .site{
-    /* background-color: yellow; */
+    
     display: grid;
     grid-template-rows: 50px 260px 1fr 100px;
-    /* grid-template-columns: ; */
+   
 }
 a{
     color: black;
@@ -24,13 +27,14 @@ span{
 }
 
 
-
+header{
+    height: 70px;
+}
 header a{
     float: right;
     margin-right: 50px;
-    margin-top: 10px;
-    height: 60px;
-    
+    height: 70px;
+    border-top: 2px solid white;
     
   }
 header a:hover{
@@ -42,10 +46,18 @@ header a:hover{
     margin-left: 2%;
 }
 .barre_de_recherche{
-  display: flex;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
 }
 .barre_de_recherche i{
   background-color: grey;
+  padding: 8px 10px;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.barre_de_recherche input{
+    height: 100%;
 }
 
 .bouton_recherche{
@@ -55,31 +67,36 @@ header a:hover{
  border-radius: 0px 10px 10px 0px;
 }
 .filtre{
-  display: flex;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
 }
-.filtre p{
-  margin-right: 30px;
-  border: 1px solid #F2F2F2;
+.filtre div{
+    border: 3px solid #F2F2F2;
+    display: flex;
+    align-items: center;
+}
+.filtre span{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .filtre i{
     background-color: #DEEBFF;
 }
 .body{
-/* background-color: black; */
-display: grid;
-grid-template-rows: 1fr 1fr;
-grid-template-columns: 70% 1fr;
-grid-gap: 50px;
-margin-left: 2%;
-margin-right: 2%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1200px 1fr;
+    grid-gap: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.body img{
-    width: 240px;
-    height: 120px;
-  }
+
+
   figure{
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px gray;
   }
 .resultat_hebergement{
     background-color: #F2F2F2;
@@ -90,7 +107,15 @@ margin-right: 2%;
     grid-gap: 10px;
     margin-left: 3%;
     border-radius: 20px;
-    
+   
+}
+.resultat_hebergement img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 260px;
+    height: 120px;
+    margin: 5px;
+  
 }
 .afficher{
     margin-left: 40px;
@@ -103,9 +128,6 @@ h2{
     margin-left: 15px;
 }
 
-.img_hebergement{
-margin: 10px;
-}
 .resultat_hebergement figure p{
 margin-left: 15px;
 }
@@ -130,7 +152,7 @@ h3{
 }
 .proposition_hebergement figure{
     display: grid;
-    grid-template-columns: 190px 1fr;
+    grid-template-columns: 175px 1fr;
 }
 .etoileP{
     margin-top: 35px;
@@ -139,6 +161,8 @@ h3{
     width: 140px;
     margin: 7px;
     border-radius: 10px;
+    height: 126px;
+    
 }
 .proposition_activite{
     /* background-color: coral; */
@@ -164,15 +188,15 @@ h4{
 }
 .grille1{
     display: grid;
-    grid-template-columns: 480px 430px;
+    grid-template-columns: 410px 10px;
     grid-template-rows: 310px 165px;
     grid-row-start: 2;
     grid-gap: 10px;
 }
 .grille2{
     display: grid;
-    grid-template-columns: 480px 430px;
-    grid-template-rows:  165px 310px;
+    grid-template-columns: 410px 10px;
+    grid-template-rows: 165px 310px;
     grid-row-start: 2;
     grid-gap: 10px;
 }
