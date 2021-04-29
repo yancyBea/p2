@@ -168,6 +168,9 @@ figure:hover{
 .afficher{
   margin-left: 40px;
 }
+.afficher:hover{
+  color: #0065FC;
+}
 h2{
   grid-column: 1/ span 3;
   margin-left: 40px;
