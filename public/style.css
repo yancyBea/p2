@@ -18,10 +18,10 @@ figcaption{
 span{
   font-weight: bold;
 }
-.blue{
+.etoile_primary{
   color: #0065FC;
 }
-.grey{
+.etoile_second{
   color: #F2F2F2;
 }
 
@@ -230,7 +230,6 @@ margin-top: 25px;
   object-fit: cover;
 }
 .proposition_activite{
-  /* background-color: coral; */
   grid-column: 1 / span 2;
   display: grid;
   grid-template-columns:  1fr 1fr;
@@ -328,8 +327,6 @@ footer{
   display: grid;
   grid-template-columns: 517px 440px 1fr;
   height: 160px;
-  margin:  !important 0px;
-
 }
 .left{
   margin-left: 120px;
@@ -624,8 +621,10 @@ width: 230px;
     .afficher{
         grid-column: 1;
     }
-    
-.proposition_hebergement figure{
+    .proposition_hebergement{
+      grid-gap: 96px;
+    }
+    .proposition_hebergement figure{
 grid-template-columns: 145px 1fr;
 }
 .proposition_hebergement img{
