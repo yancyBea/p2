@@ -13,6 +13,9 @@
 .etoile_second{
   color: var(--grey);
 }
+figcaption{
+  font-weight: var(--bold);
+}
 body{
     margin: 0px;
     display: grid;
@@ -995,7 +998,7 @@ grid-row: 4;
   width: 120px
   }
   .propo_titre .fas{
-    margin-left: 180px;
+    margin-left: 80px;
     }
     .resultat_hebergement{
       background-color: var(--white);
