@@ -20,6 +20,18 @@ body{
     font-family: 'Raleway', sans-serif;
    
   }
+  .checkbtn{
+    font-size: 30px;
+    color: var(--blue);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
   a{
     color: black;
     text-decoration: none;
@@ -32,6 +44,12 @@ body{
   
   header nav{
     float: right;
+  }
+  nav ul{
+    margin-top: 0px;
+  }
+  nav ul li{
+    display: inline-block;
   }
   
   header a{
@@ -914,9 +932,25 @@ footer div{
   :root{
     --marge: 34px;
   }
-  header a{
-    margin-right: 25px;
+  .checkbtn{
+    display: block;
+    position: fixed;
   }
+  header{
+    width: 360px;
+  }
+  ul{
+     position: fixed;
+     height: 100vh;
+     background-color:var(--grey);
+     text-align: center;
+     top: 70px;
+     left: -200%;
+     transition: all .5s;
+   }
+   #check:checked ~ ul{
+     left: 0;
+   }
   .filtre{
     display: grid;
     grid-template-columns:170px 100px;
@@ -1091,8 +1125,24 @@ grid-row: 4;
   :root{
     --marge: 0px;
   }
-  header a{
-    margin-right: 25px;
+ .checkbtn{
+   display: block;
+   position: fixed;
+ }
+ header{
+   width: 360px;
+ }
+ ul{
+    position: fixed;
+    height: 100vh;
+    background-color:var(--grey);
+    text-align: center;
+    top: 70px;
+    left: -200%;
+    transition: all .5s;
+  }
+  #check:checked ~ ul{
+    left: 0;
   }
   .recherche{
     width: 350px;
@@ -1151,7 +1201,7 @@ grid-template-columns: 300px;
       grid-template-columns: 210px;
       grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 2px;
-      margin-top: 520px;
+      margin-top: 660px;
      }
      .resultat_hebergement img{
      width: 290px;
@@ -1263,7 +1313,7 @@ grid-template-columns: 300px;
                   display: grid;
                   grid-template-rows: 150px 150px 150px;
                   height: 600px;
-                  width: auto;
+                  width: 360px;
                   }
                   .footer_div3{
                   grid-row:1; 

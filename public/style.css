@@ -6,6 +6,18 @@ body{
   margin-left: 30px;
   margin-right: 30px;
 }
+.checkbtn{
+  font-size: 30px;
+  color: #0065FC;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
 a{
   color: black;
   text-decoration: none;
@@ -1183,33 +1195,20 @@ margin-left: 57px;
 }
 @media screen and (max-width:515px) {
 
-header{
-height: 100px;
-    display: grid;
-    grid-template-columns: 170px 170px 
+
+.checkbtn{
+  display: block;
+}
+header nav{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: greenyellow;
+  text-align: center;
 }
 header a{
-float: none;
-margin-right: 0px;
-height: 70px;
-border-bottom: 2px solid #f2f2f2;
-
+  display: block;
 }
-header a:hover{
-border-bottom: 2px solid #0065FC;
-color: #0065FC;
-border-top: none;
-
-}
- .inscrire{
-     border: none;
-margin-right: 0px;
-}
-
-.inscrire:hover{
-    border: none;
-}
-
 .recherche{
 /* background-color: blue; */
 margin-left: 2%;
