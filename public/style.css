@@ -1,3 +1,5 @@
+/* variable */
+
 :root{
   --blue:#0065FC ;
   --grey: #F2F2F2;
@@ -16,23 +18,24 @@
 figcaption{
   font-weight: var(--bold);
 }
+
+/* body */
 body{
     margin: 0px;
     display: grid;
-    grid-template-rows: 50px 300px 1fr 100px;
     font-family: 'Raleway', sans-serif;
-   
+    overflow-x: hidden;
   }
   a{
     color: black;
     text-decoration: none;
   }
+
+  /* le header */
   header{
-    height: 70px;
     margin-left: var(--marge);
     margin-right: var(--marge);
   }
-  
   header nav{
     float: right;
   }
@@ -56,6 +59,7 @@ body{
   border-top: 2px solid var(--blue);
   color: var(--blue);
   }
+  /* la partie recherche  */
 .recherche{
   margin-left: var(--marge);
   margin-right: var(--marge);
@@ -110,7 +114,6 @@ body{
         .filtre span{
           font-weight: var(--bold);
         }
-
     .filtres{
       margin-top: 10px;
       font-size: larger;
@@ -119,7 +122,6 @@ body{
     .filtre :nth-child(2){
       width: 150px;
     }
-    
     .filtre :nth-child(3){
       width: 120px;
     }
@@ -145,6 +147,7 @@ body{
       padding: 3px;
       margin-right: 10px;
     }
+/* le bloc contenant mes article */
     .contain{
       display: grid;
       grid-template-rows: 1fr 1fr;
@@ -162,16 +165,15 @@ body{
       box-shadow: 0px 10px 10px 0px #E9E9E9;
       transition: 0.5s;
     }
-    
     figure:hover{
       transform: scale(1.10);
     }
+    /* le premier article du bloc */
     .resultat_hebergement{
       background-color: var(--grey);
       display: grid;
       grid-template-columns: 350px 350px 350px;
-      grid-auto-rows: 50px 1fr 1fr;
-      justify-content: center;
+      grid-template-rows: 50px 1fr 1fr;
       grid-gap: 10px;
       border-radius: 20px;
     }
@@ -197,7 +199,6 @@ body{
     .resultat_hebergement figure p{
     margin-left: 15px;
     }
-    
     .etoile{
     margin-left: 15px;
     margin-bottom: 15px;
@@ -209,6 +210,7 @@ body{
     .afficher:hover{
       color: #0065FC;
     }
+     /* le deuxieme article du bloc */
     .proposition_hebergement{
       background-color: var(--grey);
       display: grid;
@@ -230,6 +232,9 @@ body{
       display: grid;
       grid-template-columns: 175px 1fr;
     }
+    .etoileP{
+      margin-top: 35px;
+    }
     .proposition_hebergement img{
       width: 140px;
       margin: 7px;
@@ -237,17 +242,13 @@ body{
       height: 126px;
       object-fit: cover;
     }
-    .etoileP{
-      margin-top: 35px;
-    }
-   
+     /* le troisieme article du bloc */
     .proposition_activite{
       grid-column: 1 / span 2;
       display: grid;
       grid-template-columns:  1fr 1fr;
       grid-template-rows: 60px 1fr;
     }
-
     .proposition_activite h2{
       margin-left: 40px;
     }
@@ -264,9 +265,10 @@ body{
       border-radius: 20px 20px 0px 0px;
       object-fit: cover;
     }
+    /* dans cette article j'ai mis deux grille car sa me facilitait la tache pour les media queries */
     .grille1{
       display: grid;
-      grid-template-columns: 410px 10px;
+      grid-template-columns: 410px 1fr;
       grid-template-rows: 310px 165px;
       grid-row-start: 2;
       grid-gap: 10px;
@@ -299,10 +301,9 @@ body{
      height: 157px;
      width: 323px;
   }
-
   .grille2{
     display: grid;
-    grid-template-columns: 410px 10px;
+    grid-template-columns: 410px 1fr;
     grid-template-rows: 165px 310px;
     grid-row-start: 2;
     grid-gap: 10px;
@@ -315,7 +316,6 @@ body{
   .figure1_grille2 img{
     height: 475px;
     width: 323px;
-    
   }
   .figure2_grille2{
     grid-column: 2;
@@ -332,16 +332,14 @@ body{
     width: 323px;
     margin-top: 77px;
   }
-  
   .figure3_grille2 img{
    height: 242px;
     width: 323px;
   }
-/* footer */
+  /* le footer */
   footer{
     background-color: var(--grey);
     display: inline-flex;
-    height: 200px;
   }
   footer div{
     margin-right: 220px;
@@ -353,24 +351,7 @@ body{
     font-weight: var(--bold);
   }
 
-
-  /* media queries */
-  @media screen and (max-width: 1870px) and (min-width: 1700px) {
-    .contain{
-        grid-template-columns: 1070px 400px;
-        grid-gap: 50px;
-    }
-    .propo_titre .fas{
-      margin-left: 80px;
-      }
-      .grille1{
-        grid-template-columns: 390px 10px;    
-      }
-      .grille2{
-        grid-template-columns: 390px 10px;      
-  }
-}
-
+/* les media queries */
 @media screen and (max-width: 1700px) and (min-width:1480px) {
   :root{
     --marge: 50px;
@@ -500,198 +481,6 @@ footer div{
   margin-left: 70px;
 }
 }
-/* @media screen and (max-width:1330px) and (min-width:1300px){
-  :root{
-    --marge: 34px;
-  }
-  header a{
-    margin-right: 25px;
-  }
-  .contain{
-    grid-template-columns: 880px 355px;
-    grid-gap: 20px;
-}
-.resultat_hebergement{
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 8px;
-  }
-  .resultat_hebergement img{
-  width: 210px;
-  }
-  .propo_titre .fas{
-    margin-left: 35px;
-    }
-    .proposition_hebergement figure{
-      grid-template-columns: 145px 1fr;
-      }
-      .proposition_hebergement img{
-          width: 120px
-      }
-      .proposition_activite{
-    grid-template-columns:  640px 640px;
-    margin-left: -35px;
-        }
-.grille1{
-            grid-template-columns: 310px 10px;
-          }
- .figure1_grille1{
-            height: 523px;
-            width: 300px;
-            }
-     .figure1_grille1 img{
-            height: 475px;
-            width: 300px;
-            }
-            .figure2_grille1{
-              width: 290px;
-            }
-                .figure2_grille1 img{
-              width: 290px;
-            }
-            .figure3_grille1{
-              width: 290px;
-            }
-            .figure3_grille1 img{
-              width: 290px;
-            }
-            .grille2{
-              grid-template-columns: 310px 10px;
-              }
-              .figure1_grille2{
-                height: 523px;
-                width: 300px;
-                }
-                .figure1_grille2 img{
-                height: 475px;
-                width: 300px;
-                }
-                .figure2_grille2{
-                  width: 290px;
-                }
-                    .figure2_grille2 img{
-                  width: 290px;
-                }
-                .figure3_grille2{
-                  width: 290px;
-                }
-                .figure3_grille2 img{
-                  width: 290px;
-                }
-                footer div{
-                  margin-left: 50px;
-                }
-} */
-/* @media screen and (max-width:1330px) and (min-width:1280px) {
-  :root{
-    --marge: 34px;
-  }
-  header a{
-    margin-right: 25px;
-  }
-  .contain{
-    grid-template-columns: 800px 355px;
-    grid-gap: 20px;
-}
-.resultat_hebergement{
-  grid-template-columns: 320px 320px;
-  grid-template-rows: 50px 1fr 1fr 1fr;
-  grid-gap: 2px;
-  }
-  .resultat_hebergement img{
-  width: 230px;
-  }
-      .figure_hebergement3{
-          grid-row: 4;
-      }
-      .figure_hebergement4{
-          grid-row: 3;
-      }
-        .figure_hebergement5{
-          grid-row: 3;
-      }
-      .figure_hebergement6{
-          grid-row: 4;
-        
-      }
-      .afficher{
-          grid-column: 1;
-      }
-      .proposition_hebergement{
-        grid-gap: 96px;
-      }
-      .propo_titre .fas{
-        margin-left: 35px;
-        }
-        .proposition_hebergement figure{
-          grid-template-columns: 145px 1fr;
-          }
-          .proposition_hebergement img{
-              width: 120px;
-          }
-          .proposition_activite{
-            grid-template-columns:  600px 600px;
-            margin-left: -35px;
-            }
-            .grille1{
-            grid-template-columns: 300px 10px;
-            grid-gap: 6px;
-            }
-            .figure1_grille1{
-              height: 513px;
-              width: 290px;
-              }
-              .figure1_grille1 img{
-              height: 465px;
-              width: 290px;
-              }
-              .figure2_grille1{
-                width: 280px;
-                height: 280px;
-              }
-                  .figure2_grille1 img{
-                width: 280px;
-                height: 232px;
-              }
-              .figure3_grille1{
-                width: 280px;
-                height:196px;
-              }
-              .figure3_grille1 img{
-                width: 280px;
-                  height: 147px;
-              }
-              .grille2{
-                grid-template-columns: 300px 10px;
-                grid-gap: 6px;
-                }
-                .figure1_grille2{
-                  height: 513px;
-                  width: 290px;
-                  }
-                  .figure1_grille2 img{
-                  height: 465px;
-                  width: 290px;
-                  }
-                .figure2_grille2{
-                  width: 280px;
-                  height:196px;
-                }
-                .figure2_grille2 img{
-                  width: 280px;
-                    height: 147px;
-                }
-                  .figure3_grille2{
-                    width: 280px;
-                    height: 280px;
-                  }
-                      .figure3_grille2 img{
-                    width: 280px;
-                    height: 232px;
-                    }
-                    footer div{
-                      margin-left: 50px;
-                    }
-} */
 @media screen and (max-width:1330px) and (min-width:1150px){
   :root{
     --marge: 34px;
@@ -708,8 +497,6 @@ footer div{
 grid-row: 1;
 grid-template-rows: 70px 170px;
 grid-template-columns: 360px 360px 360px;
-height: 280px;
-width: 1114px;
   }
   .propo_titre{
     grid-row: 1;
@@ -736,93 +523,61 @@ grid-column-end: span 3;
     grid-column: 3;
 }
 .resultat_hebergement{
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 8px;
+  grid-template-columns: 320px 320px 320px;
+  grid-gap: 40px;
   grid-row: 2;
   }
+  .resultat_hebergement figure{
+    width: 310px 
+  }
   .resultat_hebergement img{
-  width: 210px;
+  width: 300px;
   }
   .proposition_activite{
     grid-gap: 90px;
     grid-template-rows:  20px 1fr 1fr;     
     margin-bottom: 100px;
+  }
+  .proposition_activite figure{
     width: 400px;
-    margin-left: 90px;
+  }
+  .proposition_activite img{
+    width: 400px;
   }
   .grille1{
     grid-row: 2;
-  grid-template-columns: 460px 10px;
-  grid-gap: 60px;
-  margin-bottom: 60px;
+  grid-template-columns: 600px 1fr;
 }
-.figure1_grille1{
-  height: 608px;
-  width: 353px;
-}
-.figure1_grille1 img{
-  height: 558px;
-  width: 353px; 
-}
-.figure2_grille1{
-    height: 320px;
-    width: 353px;
-}
-.figure2_grille1 img{
-    height: 272px;
-    width: 353px;
-}
-.figure3_grille1{
-
-    height:236px;
-    width: 353px;
-}
-.figure3_grille1 img{
-   height: 187px;
-   width: 353px;
-}
-
+  .figure1_grille1{
+  width: 500px !important;
+  }
+  .figure1_grille1 img{
+    width: 500px;
+  }
+ 
 .grille2{
   grid-row: 3;
-grid-template-columns: 460px 10px;
-grid-gap: 60px;
+grid-template-columns: 600px 10px;
 }
-.figure1_grille2{
-  height: 608px;
-  width: 353px;
-}
-.figure1_grille2 img{
-  height: 558px;
-  width: 353px; 
-}
-.figure2_grille2{
-
-  height:236px;
-  width: 353px;
-}
-.figure2_grille2 img{
- height: 187px;
- width: 353px;
-}
-.figure3_grille2{
-    height: 320px;
-    width: 353px;
-}
-.figure3_grille2 img{
-    height: 272px;
-    width: 353px;
-}
-
-footer{
-  height: 230px;
-}
+   .figure1_grille2{
+  width: 500px !important;
+  }
+  .figure1_grille2 img{
+    width: 500px;
+  }
 footer div{
   margin-left: 20px;
 }
 }
-@media screen and (max-width:1150px) and (min-width:715px){
+@media screen and (max-width:1150px) and (min-width:765px){
   :root{
-    --marge: 190px;
+    --marge: 80px;
+  }
+  header nav{
+    float: none;
+    position: absolute;
+    margin-top: -48px;
+    margin-left: 190px;
   }
   header a{
     margin-right: 25px;
@@ -839,41 +594,49 @@ footer div{
 }
 .contain{
   display: grid;
-  grid-template-rows: 300px 1fr;
-  width: 715px;
+  grid-template-rows: 1350px 1fr;
 }
 .proposition_hebergement{
-   width: 650px;
-   grid-gap: 60px;
-  margin-top: 30px;
-  height: 800px;
+   background: none;
+   grid-template-rows: 70px 430px 430px 430px;
  }
 .proposition_hebergement figure{
-  grid-template-columns: 350px 1fr;
+  display: block;
+  width: 600px;
+  height: 410px;
   }
   .proposition_hebergement img{
-    width: 270px;
+  width: 585px;
+  border-radius: 10px;
+  height: 250px;
+  }
+  .proposition_hebergement figcaption{
+   margin-left: 20px;
+  }
+  .proposition_hebergement p{
+   margin-left: 20px;
+  }
+  .proposition_hebergement .etoileP{
+   margin-left: 20px;
   }
   .propo_titre .fas{
-    margin-left: 180px;
+    margin-left: 350px;
     }
     .resultat_hebergement{
       background-color: var(--white);
-      width: 680px;
       grid-row: 2;
      grid-template-columns: 340px 340px;
      grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
      grid-gap: 2px;
-     margin-top: 490px;
      }
      .resultat_hebergement img{
-      width: 562px;
-      height: 270px;
+     width: 590px;
+     height: 247px;
      margin: 5px;
      }
      .resultat_hebergement figure{
-      width: 572px;
-     height:383px;
+     width: 600px;
+     height:360px;
      }
      .figure_hebergement1{
        grid-row: 2;
@@ -900,16 +663,15 @@ footer div{
       grid-gap: 5px;
       grid-template-rows:  70px 1fr 1fr;     
       margin-bottom: 100px;
-      width: 700px;
       }
-      .proposition_activite figure{
-        width: 572px;
-        height:383px;
-      }
-      .proposition_activite img{
-        width: 572px;
-        height: 330px;
-      }
+  .proposition_activite figure{
+      width: 600px;
+     height:360px;
+  }
+  .proposition_activite img{
+     width: 600px;
+     height:311px;
+  }
       .grille1{
       grid-row: 2;
       grid-template-columns: 1fr;
@@ -952,76 +714,85 @@ footer div{
                   margin-left: 50px;
                 }
 }
-@media screen and (max-width:715px) and (min-width:515px){
+@media screen and (max-width:765px) and (min-width:515px){
+ :root{
+    --marge: 80px;
+  }
+  header{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  header nav{
+    float: none;
+    position: static;
+    margin-top: -48px;
+    margin-left: 75px;
+  }
   header a{
-  margin-right: 0px;
+    margin-right: 25px;
+  }
+  .recherche{ 
+    max-width: 530px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .filtre{
     display: grid;
-    grid-template-columns:170px 100px;
+    grid-template-columns: 60px 150px 120px 120px;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
    margin-top: 20px;
  }
- .filtres{
-   grid-row: 1;
- }
- .eco{
+ .animaux{
   grid-row: 2;
-    grid-column: 1;
-}
-.fam{
-  grid-row: 2;
-  grid-column: 2;
-}
-.rom{
-  grid-row: 3;
-  grid-column: 1;
-}
-.animaux{
-grid-column: 1;
-grid-row: 4;
 }
 .contain{
   display: grid;
-  grid-template-rows: 300px 1fr;
-  width: 515px;
+  grid-template-rows: 1350px 1fr;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .proposition_hebergement{
-   width: 400px;
-   grid-gap: 60px;
-  margin-top: 200px;
-  height: 800px;
+   background: none;
+   grid-template-rows: 50px 430px 430px 430px;
  }
 .proposition_hebergement figure{
-  grid-template-columns: 145px 1fr;
+  display: block;
+  width: 440px;
+  height: 410px;
   }
   .proposition_hebergement img{
-  width: 120px
+  width: 425px;
+  border-radius: 10px;
+  height: 250px;
+  }
+  .proposition_hebergement figcaption{
+   margin-left: 20px;
+  }
+  .proposition_hebergement p{
+   margin-left: 20px;
+  }
+  .proposition_hebergement .etoileP{
+   margin-left: 20px;
   }
   .propo_titre .fas{
-    margin-left: 80px;
+    margin-left: 190px;
     }
     .resultat_hebergement{
       background-color: var(--white);
-      width: 345px;
       grid-row: 2;
-      grid-template-columns: 210px;
-      grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-gap: 2px;
-      margin-top: 660px;
-     }
-     .resultat_hebergement h2{
-       margin-top: 0px;
+     grid-template-columns: 340px 340px;
+     grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-gap: 2px;
      }
      .resultat_hebergement img{
-     width: 290px;
-     height: 147px;
+     width: 430px;
+     height: 247px;
      margin: 5px;
      }
      .resultat_hebergement figure{
-     width: 300px;
-     height:260px;
+     width: 440px;
+     height:360px;
      }
      .figure_hebergement1{
        grid-row: 2;
@@ -1048,16 +819,15 @@ grid-row: 4;
       grid-gap: 5px;
       grid-template-rows:  70px 1fr 1fr;     
       margin-bottom: 100px;
-      width: 400px;
       }
-      .proposition_activite figure{
-        width: 280px;
-        height:196px;
-      }
-      .proposition_activite img{
-        width: 280px;
-        height: 147px;
-      }
+  .proposition_activite figure{
+      width: 440px;
+     height:360px;
+  }
+  .proposition_activite img{
+     width: 440px;
+     height:311px;
+  }
       .grille1{
       grid-row: 2;
       grid-template-columns: 1fr;
@@ -1073,7 +843,7 @@ grid-row: 4;
         .figure3_grille1{
           grid-column: 1;
           grid-row: 3;
-          }          
+          }
           .grille2{
            grid-row: 3;
            grid-template-columns: 1fr;
@@ -1085,7 +855,7 @@ grid-row: 4;
             .figure2_grille2{
               grid-column: 1;
               grid-row: 2;
-              } 
+              }
             .figure3_grille2{
               grid-column: 1;
               grid-row: 3;
@@ -1094,26 +864,14 @@ grid-row: 4;
               footer{
                 display: grid;
                 grid-template-rows: 150px 150px 150px;
-                height: 600px;
-                width: 620px;
                 }
-                .footer_div3{
-                grid-row:1; 
-                width: 350px;
-                }
-                .footer_div2{
-                    grid-row: 2;
-                    width: 350px;
-                }
-                .footer_div3{
-                    grid-row: 3;
-                    width: 350px;
-                }
-                
 }
 @media screen and (max-width:515px){
   :root{
     --marge: 0px;
+  }
+  header nav{
+    float: none;
   }
   header a{
     margin-right: 0px;
@@ -1123,8 +881,8 @@ grid-row: 4;
       border-top: none;
     }
   .recherche{
-    width: 350px;
-    margin-top: 40px;
+    margin-left:0 ;
+    max-width: 400px;
   }
   .filtre{
     display: grid;
@@ -1154,15 +912,12 @@ grid-row: 4;
 }
 .contain{
   display: grid;
-grid-template-rows: 300px 1fr;
-width: 300px;
-grid-template-columns: 300px;
+grid-template-rows: 800px 1fr;
 margin-top: 30px;
 }
 .proposition_hebergement{
    width: 400px;
    grid-gap: 60px;
-  margin-top: 200px;
   height: 800px;
  }
 .proposition_hebergement figure{
@@ -1176,12 +931,10 @@ margin-top: 30px;
     }
     .resultat_hebergement{
       background-color: var(--white);
-      width: 345px;
       grid-row: 2;
-      grid-template-columns: 210px;
+      grid-template-columns: none;
       grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 2px;
-      margin-top: 660px;
      }
      .resultat_hebergement h2{
        margin-top: 0px;
@@ -1220,15 +973,6 @@ margin-top: 30px;
       grid-gap: 5px;
       grid-template-rows:  70px 1fr 1fr;     
       margin-bottom: 100px;
-      width: 400px;
-      }
-      .proposition_activite figure{
-        width: 280px;
-        height:196px;
-      }
-      .proposition_activite img{
-        width: 280px;
-        height: 147px;
       }
       .grille1{
       grid-row: 2;
@@ -1237,15 +981,33 @@ margin-top: 30px;
       }
       .figure1_grille1{
         grid-row: 1 ;
+        width: 280px;
+        height:196px;
+        }
+        .figure1_grille1 img{
+        width: 280px;
+        height: 147px;
         }
         .figure2_grille1{
+          width: 280px;
+          height:196px;
           grid-row: 2;
           grid-column: 1;
           }
+          .figure2_grille1 img{
+          width: 280px;
+          height: 147px;
+          }
         .figure3_grille1{
+          width: 280px;
+          height:196px;
           grid-column: 1;
           grid-row: 3;
-          }          
+          }
+          .figure3_grille1 img{
+          width: 280px;
+          height: 147px;
+          }
           .grille2{
            grid-row: 3;
            grid-template-columns: 1fr;
@@ -1253,32 +1015,40 @@ margin-top: 30px;
            }
           .figure1_grille2{
             grid-row: 1;
+            width: 280px;
+            height:196px;
+            }
+            .figure1_grille2 img{
+            width: 280px;
+            height: 147px;
+            grid-row: 1;
             }
             .figure2_grille2{
+              width: 280px;
+              height:196px;
               grid-column: 1;
               grid-row: 2;
-              } 
+              }
+              .figure2_grille2 img{
+              width: 280px;
+              height: 147px;
+              }
             .figure3_grille2{
+              width: 280px;
+              height:196px;
               grid-column: 1;
               grid-row: 3;
               margin-top: 0px;
               }
+              .figure3_grille2 img{
+              width: 280px;
+              height: 147px;
+              }
                 footer{
                   display: grid;
-                  grid-template-rows: 150px 150px 150px;
-                  height: 600px;
-                  width: 360px;
+                  grid-template-rows: 150px 150px 150px
                   }
-                  .footer_div3{
-                  grid-row:1; 
-                  width: 350px;
-                  }
-                  .footer_div2{
-                      grid-row: 2;
-                      width: 350px;
-                  }
-                  .footer_div3{
-                      grid-row: 3;
-                      width: 350px;
+                  footer div{
+                    margin-right: 0px;
                   }
 }
