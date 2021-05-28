@@ -340,6 +340,7 @@ body{
   footer{
     background-color: var(--grey);
     display: inline-flex;
+    padding: 30px;
   }
   footer div{
     margin-right: 220px;
@@ -374,32 +375,16 @@ body{
     grid-template-columns: 350px 10px;    
     grid-gap: 8px;
   }
-  .figure2_grille1{
-    width: 310px;
-}
-      .figure2_grille1 img{
-    width: 310px;
-}
-.figure3_grille1{
-  width: 310px;
-}
-.figure3_grille1 img{
-  width: 310px;
-}
   .grille2{
     grid-template-columns: 350px 10px;   
     grid-gap: 8px;   
 }
-.figure2_grille2{
-  width: 310px;
+  .figure2_grille1 ,.figure2_grille2 ,.figure3_grille1
+  ,.figure3_grille2{
+    width: 310px;
 }
-    .figure2_grille2 img{
-  width: 310px;
-}
-.figure3_grille2{
-  width: 310px;
-}
-.figure3_grille2 img{
+.figure2_grille1 img ,.figure2_grille2 img ,.figure3_grille1 img
+,.figure3_grille2 img{
   width: 310px;
 }
 
@@ -431,51 +416,22 @@ body{
     .proposition_activite{
       grid-template-columns:  640px 640px;
     }
-    .grille1{
+    .grille1, .grille2{
       grid-template-columns: 310px 10px;
     }
-    .figure1_grille1{
+    .figure1_grille1,.figure1_grille2{
       height: 523px;
       width: 300px;
     }
-    .figure1_grille1 img{
+    .figure1_grille1 img,.figure1_grille2 img{
       height: 475px;
       width: 300px;
     }
-    .figure2_grille1{
+    .figure2_grille1,.figure2_grille2, .figure2_grille1 img,.figure2_grille2 img{
       width: 290px;
   }
-        .figure2_grille1 img{
-      width: 290px;
-  }
-  .figure3_grille1{
+  .figure3_grille1, .figure3_grille2 ,.figure3_grille1 img,.figure3_grille2 img{
     width: 290px;
-}
-  .figure3_grille1 img{
-    width: 290px;
-}
-.grille2{
-  grid-template-columns: 310px 10px;
-}
-.figure1_grille2{
-  height: 523px;
-  width: 300px;
-}
-.figure1_grille2 img{
-  height: 475px;
-  width: 300px; 
-}
-.figure2_grille2{
-  width: 290px;
-}
-    .figure2_grille2 img{
-  width: 290px;
-}
-.figure3_grille2{
-  width: 290px;
-}
-.figure3_grille2 img{
-  width: 290px;
 }
 footer div{
   margin-left: 70px;
@@ -538,32 +494,22 @@ grid-column-end: span 3;
     grid-template-rows:  20px 1fr 1fr;     
     margin-bottom: 100px;
   }
-  .proposition_activite figure{
-    width: 400px;
-  }
-  .proposition_activite img{
+  .proposition_activite figure,.proposition_activite img{
     width: 400px;
   }
   .grille1{
     grid-row: 2;
   grid-template-columns: 600px 1fr;
 }
-  .figure1_grille1{
+  .figure1_grille1, .figure1_grille1 img{
   width: 500px !important;
   }
-  .figure1_grille1 img{
-    width: 500px;
-  }
- 
 .grille2{
   grid-row: 3;
 grid-template-columns: 600px 10px;
 }
-   .figure1_grille2{
+   .figure1_grille2, .figure1_grille2 img{
   width: 500px !important;
-  }
-  .figure1_grille2 img{
-    width: 500px;
   }
 footer div{
   margin-left: 20px;
@@ -610,13 +556,7 @@ footer div{
   border-radius: 10px;
   height: 250px;
   }
-  .proposition_hebergement figcaption{
-   margin-left: 20px;
-  }
-  .proposition_hebergement p{
-   margin-left: 20px;
-  }
-  .proposition_hebergement .etoileP{
+  .proposition_hebergement figcaption,.proposition_hebergement .etoileP,.proposition_hebergement p{
    margin-left: 20px;
   }
   .propo_titre .fas{
@@ -766,13 +706,7 @@ footer div{
   border-radius: 10px;
   height: 250px;
   }
-  .proposition_hebergement figcaption{
-   margin-left: 20px;
-  }
-  .proposition_hebergement p{
-   margin-left: 20px;
-  }
-  .proposition_hebergement .etoileP{
+  .proposition_hebergement figcaption, .proposition_hebergement .etoileP, .proposition_hebergement p{
    margin-left: 20px;
   }
   .propo_titre .fas{
@@ -868,8 +802,9 @@ footer div{
 }
 @media screen and (max-width:515px){
   :root{
-    --marge: 0px;
+    --marge: 30px;
   }
+  
   header nav{
     float: none;
   }
@@ -881,7 +816,6 @@ footer div{
       border-top: none;
     }
   .recherche{
-    margin-left:0 ;
     max-width: 400px;
   }
   .filtre{
