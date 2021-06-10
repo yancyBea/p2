@@ -278,9 +278,6 @@ body{
       display: grid;
       grid-template-columns: 175px 1fr;
     }
-    .etoileP{
-      margin-top: 35px;
-    }
     .proposition_hebergement img{
       width: 140px;
       margin: 7px;
@@ -353,8 +350,10 @@ body{
   }
   .figure3_grille1{
       grid-column: 2;
-      height:206px;
-      width: 323px;
+  }
+  .figure3_grille1 figure{
+    height:206px;
+    width: 323px;
   }
   .figure3_grille1 img{
      height: 157px;
@@ -387,6 +386,8 @@ body{
   }
   .figure3_grille2{
     grid-column: 2;
+  }
+  .figure3_grille2 figure{
     height: 290px;
     width: 323px;
     margin-top: 77px;
@@ -406,6 +407,7 @@ body{
     background-color: var(--grey);
     display: inline-flex;
     padding: 30px;
+    margin-top: 100px;
   }
   footer div{
     margin-right: 220px;

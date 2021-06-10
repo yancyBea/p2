@@ -30,7 +30,7 @@
       width: 310px;
   }
   .figure2_grille1 img ,.figure2_grille2 img ,.figure3_grille1 img
-  ,.figure3_grille2 img{
+  ,.figure3_grille2 img, .figure3_grille2 figure{
     width: 310px;
   }
   
@@ -76,7 +76,7 @@
       .figure2_grille1,.figure2_grille2, .figure2_grille1 img,.figure2_grille2 img{
         width: 290px;
     }
-    .figure3_grille1, .figure3_grille2 ,.figure3_grille1 img,.figure3_grille2 img{
+    .figure3_grille1, .figure3_grille2 ,.figure3_grille1 img,.figure3_grille2 img, .figure3_grille2 figure{
       width: 290px;
   }
   footer div{
@@ -99,6 +99,7 @@
   grid-row: 1;
   grid-template-rows: 70px 170px;
   grid-template-columns: 360px 360px 360px;
+  width: 1125px;
     }
     .propo_titre{
       grid-row: 1;
@@ -222,7 +223,7 @@
        }
        .resultat_hebergement figure{
        width: 600px;
-       height:360px;
+       height:380px;
        }
        .figure_hebergement1{
          grid-row: 2;
@@ -372,7 +373,7 @@
        }
        .resultat_hebergement figure{
        width: 440px;
-       height:360px;
+       height:380px;
        }
        .figure_hebergement1{
          grid-row: 2;
@@ -526,7 +527,7 @@
        }
        .resultat_hebergement figure{
        width: 300px;
-       height:260px;
+       height:280px;
        }
        .figure_hebergement1{
          grid-row: 2;
@@ -579,10 +580,12 @@
             height: 147px;
             }
           .figure3_grille1{
-            width: 280px;
-            height:196px;
             grid-column: 1;
             grid-row: 3;
+            }
+            .figure3_grille1 figure{
+              width: 280px;
+              height:196px;
             }
             .figure3_grille1 img{
             width: 280px;
@@ -614,11 +617,13 @@
                 height: 147px;
                 }
               .figure3_grille2{
-                width: 280px;
-                height:196px;
                 grid-column: 1;
                 grid-row: 3;
-                margin-top: 0px;
+                }
+                .figure3_grille2 figure{
+                  margin-top: 0px;
+                  width: 280px;
+                  height:196px;
                 }
                 .figure3_grille2 img{
                 width: 280px;
