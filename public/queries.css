@@ -306,7 +306,7 @@
       --marge: 80px;
     }
     header{
-      margin-left: 0px;
+      margin-left: 40px;
       margin-right: 0px;
     }
     header nav{
@@ -451,7 +451,9 @@
     :root{
       --marge: 30px;
     }
-    
+    header img{
+      margin-left: 120px;
+    }
     header nav{
       float: none;
     }
