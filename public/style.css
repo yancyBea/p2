@@ -13,7 +13,6 @@
   --white: white;
   --bold: bold;
   --marge: 100px;
-
 }
 .etoile_primary{
   color: var(--blue);
@@ -21,10 +20,6 @@
 .etoile_second{
   color: var(--grey);
 }
-figcaption{
-  font-weight: var(--bold);
-}
-
 /*********** 
  ***********
  ***********
@@ -229,13 +224,14 @@ body{
     }
     .resultat_hebergement figcaption{
       margin-left: 15px;
-      font-weight: var(--bold);
+      padding: 2px;
     }
     .resultat_hebergement span{
       font-weight: var(--bold);
     }
     .resultat_hebergement figure p{
     margin-left: 15px;
+    margin-bottom: 10px;
     }
     .etoile{
     margin-left: 15px;
@@ -310,6 +306,7 @@ body{
     .proposition_activite figcaption{
       margin-top: 15px;
       margin-left: 15px;
+      font-weight: var(--bold);
     }
     .proposition_activite img{
       border-radius: 20px 20px 0px 0px;
