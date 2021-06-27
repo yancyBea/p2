@@ -109,6 +109,10 @@ body{
     border-radius: 0px 10px 10px 0px;
     border: var(--blue);
     }
+ ::placeholder{
+    font-weight: var(--bold);
+   color: black;
+  }
     .filtre{
       display: flex;
       align-items: flex-start;
@@ -178,7 +182,7 @@ body{
 
     .contain{
       display: grid;
-      grid-gap: 50px;
+      grid-gap: 100px;
       margin-left: var(--marge);
       margin-right: var(--marge);
     }
@@ -280,6 +284,9 @@ body{
       border-radius:10px 0px 0px 10px;
       height: 126px;
       object-fit: cover;
+    }
+    .proposition_hebergement .etoileP{
+      margin-top: 25px;
     }
 /*********** 
  ***********

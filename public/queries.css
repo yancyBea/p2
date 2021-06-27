@@ -586,26 +586,44 @@
   :root {
     --marge: 30px;
   }
-
-  header img {
-    margin-left: 120px;
+  header{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 70px;
   }
-
-  header nav {
+  header img{
+    margin-left: 30px;
+  }
+  header a {
+    margin-right: 20px;
+    padding     : 15px;
     float: none;
   }
-
-  header a {
-    margin-right: 0px;
-    padding     : 15px;
-  }
-
   header a:hover {
     border-top: none;
   }
-
+.posi{
+  position: absolute;
+  top: 20px;
+  left: 230px;
+  }
+  .posi2{
+    position: absolute;
+    top: 80px;
+    right: 200px;
+  }
+  .posi3{
+        position: absolute;
+    top: 80px;
+    right: 50px;
+}
   .recherche {
     max-width: 400px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  h1{
+    font-size: 26px;
   }
 
   .filtre {
@@ -642,14 +660,16 @@
 
   .contain {
     display           : grid;
-    grid-template-rows: 800px 1fr;
+    grid-template-rows: 617px 1fr;
     margin-top        : 30px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .proposition_hebergement {
     width   : 400px;
-    grid-gap: 60px;
-    height  : 800px;
+    height  : 630px;
+    border-radius: 0px;
   }
 
   .proposition_hebergement figure {
@@ -813,10 +833,12 @@
 
   footer {
     display           : grid;
-    grid-template-rows: 150px 150px 150px
+    grid-template-rows: 150px 150px 150px;
+    margin-top: 0px;
   }
 
   footer div {
     margin-right: 0px;
+    margin-left: 20px;
   }
 }
